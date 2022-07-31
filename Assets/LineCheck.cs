@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LineCheck : MonoBehaviour
 {
-    public float timeOut = 3f;
+    public float timeOut;
 
     float time = 0f;
     SpriteRenderer sr;
@@ -29,7 +29,7 @@ public class LineCheck : MonoBehaviour
         {
             time += Time.deltaTime;
         }
-        if (time > 3f)
+        if (time > timeOut)
         {
             GameManager.instance.GameOver();
         }

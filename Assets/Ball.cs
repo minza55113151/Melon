@@ -5,6 +5,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public int id;
+    public bool newSpawn = true;
     private void Start()
     {
         Vector3 target = transform.localScale;
@@ -62,5 +63,13 @@ public class Ball : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+    }
+    public void ballDeploy()
+    {
+        Invoke("notNewSpawn",2f);
+    }
+    private void notNewSpawn()
+    {
+        newSpawn = false;
     }
 }

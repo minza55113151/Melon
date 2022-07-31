@@ -56,5 +56,6 @@ public class Player : MonoBehaviour
         ball.transform.parent = null;
         ball.GetComponent<Rigidbody2D>().isKinematic = false;
         ball.GetComponent<CircleCollider2D>().enabled = true;
+        ball.GetComponent<Ball>().ballDeploy();
     }
 }
