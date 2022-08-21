@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
+        Time.timeScale = 1f;
         //score
         score = 0;
         textScore.text = score.ToString();
@@ -52,7 +53,6 @@ public class GameManager : MonoBehaviour
     }
     public void Retry()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("Scene");
     }
     private void HighScore()

@@ -27,6 +27,7 @@ public class BallManager : MonoBehaviour
     private IEnumerator SpawnBall(int level, Vector3 spawnPoint)
     {
         yield return new WaitForSeconds(0.1f);
-        Instantiate(ballPrefabs[level], spawnPoint, Quaternion.identity);
+        GameObject ball = Instantiate(ballPrefabs[level], spawnPoint, Quaternion.identity);
+        ball.GetComponent<Ball>().ballDeploy();
     }
 }

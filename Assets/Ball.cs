@@ -53,6 +53,7 @@ public class Ball : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        transform.localScale = b;
     }
     private IEnumerator Position(Vector3 a, Vector3 b, float t)
     {
