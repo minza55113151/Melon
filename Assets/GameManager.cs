@@ -43,7 +43,6 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighScore", highScore);
         }
     }
-
     public void GameOver()
     {
         isGameOver = true;
@@ -54,6 +53,7 @@ public class GameManager : MonoBehaviour
     public void Retry()
     {
         SceneManager.LoadScene("Scene");
+        AdsManager.instance.PlayAd();
     }
     private void HighScore()
     {
